@@ -1,0 +1,10 @@
+<!-- detail per each magazine -->
+<h1><%= @article.title %></h1>
+<h2><%= @article.content %></h2>
+
+<a href='/articles'>Go back to Index</a>
+
+<form method="POST", action="/articles/<%=@article.id%>">
+    <input id="hidden", type="hidden", name="_method", value="DELETE">
+    <input type="submit", value="Delete Article">
+</form>
