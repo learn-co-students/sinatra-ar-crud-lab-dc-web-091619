@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here is Your Article</h1>
+    <p><%= @article.title %></p>
+    <p> <%= @article.content %></p>
+    <form action="/articles/<%= @article.id %>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete this Article">
+    </form>
+</body>
+</html>
