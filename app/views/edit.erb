@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Edit an Article</h1>
+
+    <form action="/articles/<%= @article.id %>" method="POST">
+        <input type="hidden" id="hidden" name="_method" value="PATCH">
+        <label for="title">Article Title</label>
+        <input type="text" id="title" name="title" value="<%= @article.title %>">
+
+        <label for="content">Article Content</label>
+        <input type="text" id="content" name="content" value="<%= @article.content %>">
+        <input type="submit" value="Update Article">
+    </form>
+</body>
+</html>
