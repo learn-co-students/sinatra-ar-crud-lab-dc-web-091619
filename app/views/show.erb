@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= @article.title %></h1>
+    <h2><%= @article.content %></h2>
+
+    <a href="/articles/<%= @article.id %>/edit">Edit the Article</a>
+    <p><a href="/articles">Go to the index</a></p>
+
+    <form action="/articles/<%= @article.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete this Book">
+    </form>
+    
+</body>
+</html>
